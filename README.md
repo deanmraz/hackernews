@@ -1,7 +1,6 @@
 # Hackernews
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Playing around with Ember and Ember Materialize. [Demo](http://dmraz-hackernews.s3-website-us-east-1.amazonaws.com/)
 
 ## Prerequisites
 
