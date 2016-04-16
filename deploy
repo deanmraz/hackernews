@@ -1,0 +1,5 @@
+#!/bin/bash
+ember build --prod
+s3cmd sync dist/ s3://dmraz-hackernews
+s3cmd setacl s3://dmraz-hackernews/ --recursive --acl-public
+s3cmd ws-info s3://dmraz-hackernews
