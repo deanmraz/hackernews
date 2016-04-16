@@ -2,14 +2,15 @@ import Ember from 'ember';
 
 export function extractDomain(params) {
   let url = params[0];
-  if(Ember.isEmpty(url)) return "";
+  if(Ember.isEmpty(url)) {
+    return "";
+  }
   let domain;
   //find & remove protocol (http, ftp, etc.) and get domain
   if (url.indexOf("://") > -1) {
     domain = url.split('/')[2];
   }
   else {
-    debugger;
     domain = url.split('/')[0];
   }
   //find & remove port number
