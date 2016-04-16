@@ -1,3 +1,14 @@
-<h2 id="title">Welcome to Ember</h2>
+{{md-navbar name='Hacker News' class='orange accent-4'}}
 
-{{outlet}}
+<div class="container">
+  {{#each model as |item|}}
+    {{#md-card title=item.title}}
+        {{#md-card-content}}
+          {{item.score}} points by <b>{{item.by}}</b> <span class="badge">{{item.descendants}} comments</span>
+        {{/md-card-content}}
+        {{#md-card-action}}
+          <a href="{{item.url}}" target="_blank" style="text-transform: lowercase;">{{extract-domain item.url}}</a>
+        {{/md-card-action}}
+    {{/md-card}}
+  {{/each}}
+</div>
